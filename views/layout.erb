@@ -1,0 +1,107 @@
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <title>800BOX Photography</title>
+<style>
+  body {
+    background: #000;
+    font-family: 'Montserrat', sans-serif;
+    color: #f2f2f2;
+  }
+  p {
+    text-align: left;
+  }
+  .text_content {
+    padding: 30px;
+  }
+  
+  a {
+    color: #696969;
+  }
+  a:hover, a:active, a:visited {
+    color: #f2f2f2;
+    text-decoration: none;
+  }
+  
+  .container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  img {
+
+  }
+  .img {
+    padding-left: 0 !important;
+    padding-top: 5px;
+  }
+  .header {
+    width: 99%;
+    margin: auto;
+    background-size: 100% ;
+    background-position: center top;
+    background-image: url("http://i.imgur.com/x46pZeH.jpg");
+    text-align: center;
+    height: 400px;
+    background-repeat: no-repeat;
+  }
+  .head_img {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+  .logo {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0px;
+    width: auto;
+  }
+  .row {
+
+  }
+  
+  .footer {
+    text-align: right;
+    font-size: 16px;
+    padding-bottom: 20px;
+    padding-top: 60xp;
+    color: #f2f2f2;
+  }
+  .nav {
+    text-align: left;
+    padding-top: 10px;
+    text-transform: uppercase;
+  }
+</style>
+
+ 
+<body>
+  <div class="container">
+      <div class="row">
+        <div class="header col-md-12">
+          
+          <img class="logo" src="http://static.tumblr.com/f3c21bbfbd48be060723e682d84e42f0/xwekafs/3Hbnmdfo3/tumblr_static_4memw7jsb2qsog84cskccgw8g.png">
+          
+        </div>
+
+      </div>
+    <%= yield %>
+  
+  
+
+    <div class="row">
+      <div class="footer col-lg-12">
+        <div class="nav"><a href="/about">About</a> &nbsp;|&nbsp; <a href="/contact">Contact</a> &nbsp;|&nbsp; <a target="_blank" href="https://500px.com/88box">500PX</a>
+        </div>
+        &copy; 2014 <B><a target="_blank" href="http://spensercoke.com">Spenser Coke</a></b>
+      </div>
+    </div>
+    
+    
+    </div>
+</body>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</html>
