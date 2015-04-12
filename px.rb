@@ -1,6 +1,6 @@
 require 'net/http'
 require 'json'
-require_relative 'super_sekrets' #Store sekret things
+require_relative 'super_sekrets' #Store CONS_KEY & USER_NAME
 
 
 class Photo #Will store only useful information we want from 500px
