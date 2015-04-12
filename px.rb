@@ -1,6 +1,6 @@
 require 'net/http'
 require 'json'
-require_relative 'super_sekrets' #Store CONS_KEY & USER_NAME
+#require_relative 'super_sekrets' #Store CONS_KEY & USER_NAME Comment out for heroku
 
 
 class Photo #Will store only useful information we want from 500px
