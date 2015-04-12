@@ -2,6 +2,11 @@ require 'net/http'
 require 'json'
 #require_relative 'super_sekrets' #Store CONS_KEY & USER_NAME Comment out for heroku
 
+#Get globals from heroku
+AWS::S3::Base.establish_connection!(
+  :cons_key   => ENV['CONS_KEY'],
+  :user_name => ENV['USER_NAME']
+  )
 
 class Photo #Will store only useful information we want from 500px
   attr_reader :thumb, :id, :rating, :name

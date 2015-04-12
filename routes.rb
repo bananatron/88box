@@ -25,6 +25,7 @@ end
 #Root
 get '/' do
 
+
   @master_photolist = [] #Array to contain all PHOTO objects which will be passed to the front
 
   page_first = get_page(1) #Get first page
