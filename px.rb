@@ -1,8 +1,9 @@
 require 'net/http'
 require 'json'
 
-USER_NAME = "88box"
+
 CONS_KEY = "WBZ0X4nw7uY0YXwrmbKyPajBNT5wi4cpn5vrDNz9"
+$username = "88box"
 
 class Photo #Will store only useful information we want from 500px
   attr_reader :thumb, :id, :rating, :name
@@ -25,9 +26,9 @@ end  #end Photo
 ##########
 
 def get_page(page_num) #RETURN page from json string as HASH
-  raise abort("No username supplied. Aborting") if USER_NAME == "" #Raise for empty
+  raise abort("No username supplied. Aborting") if $username == "" #Raise for empty
   raise abort("No key supplied. Aborting") if CONS_KEY == ""
-  url = "https://api.500px.com/v1/photos?feature=user&username=#{USER_NAME}&page=#{page_num}&consumer_key=#{CONS_KEY}"
+  url = "https://api.500px.com/v1/photos?feature=user&username=#{$username}&page=#{page_num}&consumer_key=#{CONS_KEY}"
   rr = Net::HTTP.get(URI.parse(url))
   JSON.parse(rr)
 end

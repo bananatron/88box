@@ -78,21 +78,31 @@
  
 <body>
   <div class="container">
+    
       <div class="row">
+        <% if @user == "88box" %>
         <div class="header col-md-12">
           <a href="/">
           <img class="logo" src="http://static.tumblr.com/f3c21bbfbd48be060723e682d84e42f0/xwekafs/3Hbnmdfo3/tumblr_static_4memw7jsb2qsog84cskccgw8g.png">
           </a>
         </div>
+         <% else %>
+        <div class="col-md-12">
+          <h1><%= @user %></h2>
+        </div>
+         <% end %>
 
       </div>
     <%= yield %>
   
   
-
     <div class="row">
       <div class="footer col-lg-12">
-        <div class="nav"><a href="/about">About</a> &nbsp;|&nbsp; <a href="/contact">Contact</a> &nbsp;|&nbsp; <a target="_blank" href="https://500px.com/88box">500PX</a>
+        <div class="nav">
+          <% if @user == "88box" %>
+          <a href="/about">About</a> &nbsp;|&nbsp; <a href="/contact">Contact</a> &nbsp;|&nbsp; 
+          <% end %>
+          <a target="_blank" href="https://500px.com/<%= @user %>">500PX</a>
         </div>
         &copy; 2014 <B><a target="_blank" href="http://spensercoke.com">Spenser Coke</a></b>
       </div>
