@@ -1,9 +1,6 @@
 require 'net/http'
 require 'json'
-
-
-CONS_KEY = "WBZ0X4nw7uY0YXwrmbKyPajBNT5wi4cpn5vrDNz9"
-$username = "88box"
+require 'super_sekrets'
 
 class Photo #Will store only useful information we want from 500px
   attr_reader :thumb, :id, :rating, :name
